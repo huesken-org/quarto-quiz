@@ -1,0 +1,28 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Pinned because the golden files record real output: Quarto's HTML and
+      # LaTeX writers shape every expected.txt. Bumping is fine, it just needs a
+      # reviewed `tests/run.sh --update` in the same commit.
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.10.18
+
+      - name: Versions
+        run: |
+          quarto --version
+          quarto pandoc --version | head -1
+
+      - name: Run tests
+        run: tests/run.sh
