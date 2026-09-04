@@ -1,0 +1,10 @@
+---
+format: html
+filters: [quiz]
+title: a div without a question is left alone
+---
+
+::: {.quiz}
+No `.question` child here, so the filter keeps its hands off — `.quiz` may well
+be someone else's class.
+:::

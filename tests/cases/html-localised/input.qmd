@@ -1,0 +1,22 @@
+---
+format: html
+filters: [quiz]
+title: the button labels are configurable
+quiz:
+  reveal-label: "Show me"
+  hide-label: "Hide again"
+---
+
+## Question
+
+:::: {.quiz}
+
+::: {.question}
+Which one is right?
+:::
+
+::: {.answer .correct}
+the first
+:::
+
+::::

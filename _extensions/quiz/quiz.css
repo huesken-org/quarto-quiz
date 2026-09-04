@@ -1,0 +1,132 @@
+/* Website quiz: selectable answers + explicit reveal button.
+   Correctness colours and the explanation only appear once `.revealed` is set
+   by quiz.js. The explanation reserves its space up front (visibility, not
+   display) so revealing does not shift the page. */
+
+/* Answers in a row */
+.quiz-web .quiz-answers {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	margin-bottom: 0.8em;
+}
+
+.quiz-web .quiz-answer {
+	flex: 1 1 0;
+	display: flex;
+	align-items: baseline;
+	gap: 0.4em;
+	border: 2px solid currentColor;
+	border-radius: 0.3em;
+	padding: 0.3em 0.7em;
+	cursor: pointer;
+	opacity: 0.7;
+	transition: opacity 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+/* Check box in front of each answer, mirroring the revealjs check_box_fragment:
+   ☐ → ☑ (green) for correct, ☒ (red) for incorrect once revealed. */
+/* \FE0E = text variation selector: forces monochrome text presentation so the
+   box is not rendered as a (purple) emoji and our colour applies. */
+.quiz-web .quiz-answer::before {
+	content: "☐\FE0E";
+	font-weight: bold;
+	flex: 0 0 auto;
+}
+
+.quiz-web.revealed .quiz-answer[data-correct="true"]::before {
+	content: "☑\FE0E";
+	color: green;
+}
+
+.quiz-web.revealed .quiz-answer[data-correct="false"]::before {
+	content: "☒\FE0E";
+	color: red;
+}
+
+.quiz-web .quiz-answer:hover {
+	opacity: 1;
+}
+
+.quiz-web .quiz-answer.selected {
+	opacity: 1;
+	border-color: #2b6cb0;
+	background-color: rgba(43, 108, 176, 0.08);
+}
+
+.quiz-web .quiz-answer > * {
+	margin: 0;
+}
+
+.quiz-web.revealed .quiz-answer {
+	cursor: default;
+	opacity: 1;
+}
+
+.quiz-web.revealed .quiz-answer[data-correct="true"] {
+	border-color: #2f855a;
+	background-color: rgba(47, 133, 90, 0.12);
+}
+
+.quiz-web.revealed .quiz-answer[data-correct="false"] {
+	border-color: #c53030;
+	background-color: rgba(197, 48, 48, 0.1);
+	opacity: 0.65;
+}
+
+/* Reveal button, centered */
+.quiz-web .quiz-reveal-btn {
+	display: block;
+	margin: 0 auto 0.8em;
+	border: 2px solid currentColor;
+	border-radius: 0.3em;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	font-weight: bold;
+	padding: 0.3em 1em;
+	cursor: pointer;
+}
+
+.quiz-web .quiz-reveal-btn:hover {
+	background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Explanation: invisible (but space reserved) until revealed */
+.quiz-web .quiz-explanation {
+	visibility: hidden;
+}
+
+.quiz-web.revealed .quiz-explanation {
+	visibility: visible;
+}
+
+.quiz-web .quiz-explanation > *:last-child {
+	margin-bottom: 0;
+}
+
+/* The question, unless it holds code: a quiz slide reads better when the
+   question sits centred and larger than body text. A question *with* a code
+   block is left alone — code wants its own alignment. Override in your own
+   stylesheet if the look does not suit you. */
+.quiz-question:not(:has(.sourceCode, code, pre)) {
+	text-align: center;
+	font-size: 1.5em;
+	display: grid;
+	place-items: center;
+}
+
+/* The block the button unfolds. Same look as the solution fragment on slides
+   (see quiz-revealjs.css) — different outputs, one appearance. */
+.quiz-explanation {
+	border: 4px solid #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	text-align: center;
+	display: grid;
+	place-items: center;
+}
+
+.quiz-explanation p {
+	margin: auto;
+}

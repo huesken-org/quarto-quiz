@@ -1,0 +1,50 @@
+--- exit 0
+--- content input.html
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">a quiz on the website</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="try-it" class="level2">
+<h2 class="anchored" data-anchor-id="try-it">Try it</h2>
+<div class="quiz-web" data-reveal-label="Reveal" data-hide-label="Hide">
+<div class="quiz-question">
+<p>Which one is right?</p>
+</div>
+<div class="quiz-answers">
+<div class="quiz-answer" data-correct="false">
+<p>the first</p>
+</div>
+<div class="quiz-answer" data-correct="true">
+<p>the second</p>
+</div>
+</div>
+<button class="quiz-reveal-btn" type="button">Reveal</button>
+<div class="quiz-explanation">
+<p>The second one.</p>
+<p>Here the reasoning has to be readable — nobody is talking.</p>
+</div>
+</div>
+</section>
+
+</main>
+--- assets
+quiz.css
+quiz.js
+--- warnings

@@ -1,0 +1,43 @@
+--- exit 0
+--- content input.html
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">the button labels are configurable</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="question" class="level2">
+<h2 class="anchored" data-anchor-id="question">Question</h2>
+<div class="quiz-web" data-reveal-label="Show me" data-hide-label="Hide again">
+<div class="quiz-question">
+<p>Which one is right?</p>
+</div>
+<div class="quiz-answers">
+<div class="quiz-answer" data-correct="true">
+<p>the first</p>
+</div>
+</div>
+<button class="quiz-reveal-btn" type="button">Show me</button>
+</div>
+</section>
+
+</main>
+--- assets
+quiz.css
+quiz.js
+--- warnings

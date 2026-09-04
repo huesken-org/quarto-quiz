@@ -1,0 +1,15 @@
+title: Quiz
+author: Nathan Hüsken
+version: "0.1.0"
+quarto-required: ">=1.4.0"
+
+# `at: pre-ast` because the answers regularly *are* code blocks — the output of a
+# program, for instance. The filter has to see them as written, before Quarto
+# wraps a block carrying `filename=` into a `.code-with-filename` div.
+
+contributes:
+  filters:
+    - path: quiz.lua
+      at: pre-ast
+  shortcodes:
+    - check_box_fragment.lua

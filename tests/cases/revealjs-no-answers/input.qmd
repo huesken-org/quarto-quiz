@@ -1,0 +1,25 @@
+---
+format: revealjs
+filters: [quiz]
+title: the output is the answer
+---
+
+## Guess the output
+
+:::: {.quiz}
+
+::: {.question}
+What does this print?
+
+```{.go}
+fmt.Println(1 + 1)
+```
+:::
+
+::: {.solution}
+```
+2
+```
+:::
+
+::::

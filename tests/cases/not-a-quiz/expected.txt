@@ -1,0 +1,30 @@
+--- exit 0
+--- content input.html
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">a div without a question is left alone</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quiz">
+<p>No <code>.question</code> child here, so the filter keeps its hands off — <code>.quiz</code> may well be someone else’s class.</p>
+</div>
+
+</main>
+--- assets
+--- warnings

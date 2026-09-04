@@ -1,0 +1,27 @@
+---
+format: latex
+filters: [quiz]
+title: more than one right answer
+---
+
+## Question
+
+:::: {.quiz}
+
+::: {.question}
+Which ones are right?
+:::
+
+::: {.answer .correct}
+the first
+:::
+
+::: {.answer .incorrect}
+the second
+:::
+
+::: {.answer .correct}
+the third
+:::
+
+::::

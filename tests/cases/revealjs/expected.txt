@@ -1,0 +1,47 @@
+--- exit 0
+--- content input.html
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">a quiz on a slide</h1>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="what-does-this-print" class="slide level2">
+<h2>What does this print?</h2>
+<div class="quiz-question">
+<p>What does this print?</p>
+</div>
+<div class="quarto-layout-panel" data-layout="[1,20,-1,1,20]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 2.3%;justify-content: flex-start;">
+<p><span style="display:inline-block; position:relative; font-size:1.5em; vertical-align:middle"><span class="fragment fade-out" data-fragment-index="0">☐</span><span class="fragment fade-in" style="position:absolute; left:0; color:red" data-fragment-index="0">☒</span></span></p>
+</div>
+<div class="quiz-answer quarto-layout-cell" style="flex-basis: 46.5%;justify-content: flex-start;">
+<p><code>[1, 2]</code></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 2.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 2.3%;justify-content: flex-start;">
+<p><span style="display:inline-block; position:relative; font-size:1.5em; vertical-align:middle"><span class="fragment fade-out" data-fragment-index="0">☐</span><span class="fragment fade-in" style="position:absolute; left:0; color:green" data-fragment-index="0">☑</span></span></p>
+</div>
+<div class="quiz-answer quarto-layout-cell" style="flex-basis: 46.5%;justify-content: flex-start;">
+<p><code>[2, 3]</code></p>
+</div>
+</div>
+</div>
+<div class="quiz-solution fragment" data-fragment-index="1">
+<p>A slice starts at the index you give and runs to the end.</p>
+</div>
+<aside class="notes">
+<p>Worth saying out loud: the second number is the end, not a count. This belongs in the speaker notes, not on the slide.</p>
+</aside>
+
+</section>
+    </div>
+--- assets
+quiz-revealjs.css
+--- warnings

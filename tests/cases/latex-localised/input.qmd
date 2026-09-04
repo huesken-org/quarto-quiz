@@ -1,0 +1,25 @@
+---
+format: latex
+filters: [quiz]
+title: the solution label is configurable
+quiz:
+  solution-label: "Answer key"
+---
+
+## Question
+
+:::: {.quiz}
+
+::: {.question}
+Which one is right?
+:::
+
+::: {.answer .incorrect}
+the first
+:::
+
+::: {.answer .correct}
+the second
+:::
+
+::::

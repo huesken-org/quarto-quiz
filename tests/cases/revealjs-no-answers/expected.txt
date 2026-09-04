@@ -1,0 +1,26 @@
+--- exit 0
+--- content input.html
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">the output is the answer</h1>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="guess-the-output" class="slide level2">
+<h2>Guess the output</h2>
+<div class="quiz-question">
+<p>What does this print?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource go number-lines code-with-copy"><code class="sourceCode go"><span id="cb1-1"><a href="" aria-label="1"></a>fmt<span class="op">.</span>Println<span class="op">(</span><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="quiz-solution fragment" data-fragment-index="1">
+<pre><code>2</code></pre>
+</div>
+
+</section>
+    </div>
+--- assets
+quiz-revealjs.css
+--- warnings

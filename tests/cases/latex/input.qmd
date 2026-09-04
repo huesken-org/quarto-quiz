@@ -1,0 +1,31 @@
+---
+format: latex
+filters: [quiz]
+title: a quiz on paper
+---
+
+## Question
+
+:::: {.quiz}
+
+::: {.question}
+Which one is right?
+:::
+
+::: {.answer .incorrect}
+the first
+:::
+
+::: {.answer .correct}
+the second
+:::
+
+::: {.answer .incorrect}
+the third
+:::
+
+::: {.explanation}
+Because of this and that.
+:::
+
+::::

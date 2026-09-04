@@ -1,0 +1,14 @@
+/* The solution fragment on a slide. Same look as the block the website button
+   unfolds (`.quiz-explanation` in quiz.css) — different outputs, one
+   appearance. */
+.reveal .quiz-solution {
+	border: 4px solid #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	text-align: center;
+	display: grid;
+	place-items: center;
+}
+
+.reveal .quiz-solution p {
+	margin: auto;
+}

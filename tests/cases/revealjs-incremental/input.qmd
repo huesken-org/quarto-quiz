@@ -1,0 +1,27 @@
+---
+format: revealjs
+filters: [quiz]
+title: one answer at a time
+---
+
+## Pick one
+
+:::: {.quiz .incremental}
+
+::: {.question}
+Which one is right?
+:::
+
+::: {.answer .incorrect}
+first
+:::
+
+::: {.answer .incorrect}
+second
+:::
+
+::: {.answer .correct}
+third
+:::
+
+::::

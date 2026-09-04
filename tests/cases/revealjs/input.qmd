@@ -1,0 +1,32 @@
+---
+format: revealjs
+filters: [quiz]
+title: a quiz on a slide
+---
+
+## What does this print?
+
+:::: {.quiz}
+
+::: {.question}
+What does this print?
+:::
+
+::: {.answer .incorrect}
+`[1, 2]`
+:::
+
+::: {.answer .correct}
+`[2, 3]`
+:::
+
+::: {.solution}
+A slice starts at the index you give and runs to the end.
+:::
+
+::: {.explanation}
+Worth saying out loud: the second number is the end, not a count. This belongs
+in the speaker notes, not on the slide.
+:::
+
+::::

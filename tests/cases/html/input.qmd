@@ -1,0 +1,31 @@
+---
+format: html
+filters: [quiz]
+title: a quiz on the website
+---
+
+## Try it
+
+:::: {.quiz}
+
+::: {.question}
+Which one is right?
+:::
+
+::: {.answer .incorrect}
+the first
+:::
+
+::: {.answer .correct}
+the second
+:::
+
+::: {.solution}
+The second one.
+:::
+
+::: {.explanation}
+Here the reasoning has to be readable — nobody is talking.
+:::
+
+::::
