@@ -1,0 +1,17 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "quarto-quiz"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Web
+      - href: slides.qmd
+        text: Slides
+      - href: handout.pdf
+        text: Handout (PDF)
+
+filters:
+  - quiz

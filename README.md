@@ -47,6 +47,24 @@ Worth saying out loud: the second number is the *end*, not a count.
 | html     | answers can be picked, a button reveals which are right and unfolds solution **and** explanation                                                          |
 | latex    | question, answers as an (a)/(b)/(c) list, below it **Solution: b)** plus solution and explanation                                                         |
 
+## Example
+
+<https://huesken-org.github.io/quarto-quiz/> — the same two questions as a web
+quiz, as slides and as a PDF handout.
+
+The source is `example/`: the questions live once in `_questions.qmd`, and
+`index.qmd`, `slides.qmd` and `handout.qmd` each include it and name their
+format. `example/_extensions` is a symlink to the filter in this repo, so the
+published site is built against the extension as it stands.
+
+```bash
+quarto preview example
+```
+
+Every push to `main` renders it and deploys to GitHub Pages
+(`.github/workflows/publish.yml`); the repository needs *Settings → Pages →
+Source: GitHub Actions* set once.
+
 ## Installation
 
 ```bash

@@ -1,0 +1,60 @@
+:::: {.quiz}
+
+::: {.question}
+What does this print?
+
+```{.python}
+xs = [1, 2, 3]
+print(xs[1:])
+```
+:::
+
+::: {.answer .incorrect}
+`[1, 2]`
+:::
+
+::: {.answer .correct}
+`[2, 3]`
+:::
+
+::: {.solution}
+A slice starts at the index you give and runs to the end.
+:::
+
+::: {.explanation}
+Worth saying out loud: the second number is the *end*, not a count.
+:::
+
+::::
+
+:::: {.quiz .incremental}
+
+::: {.question}
+Which of these are immutable in Python?
+:::
+
+::: {.answer .correct}
+`tuple`
+:::
+
+::: {.answer .incorrect}
+`list`
+:::
+
+::: {.answer .correct}
+`str`
+:::
+
+::: {.answer .incorrect}
+`dict`
+:::
+
+::: {.solution}
+`tuple` and `str` — two answers are correct here.
+:::
+
+::: {.explanation}
+The `.incremental` class reveals the answers one at a time on the slide.
+:::
+
+::::

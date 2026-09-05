@@ -1,0 +1,12 @@
+---
+title: "One source, three outputs"
+subtitle: "the slide shape"
+format: revealjs
+---
+
+## Python quiz
+
+The check boxes fill in as you step through the slide; the explanation sits in
+the speaker notes (press `s`).
+
+{{< include _questions.qmd >}}

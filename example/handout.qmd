@@ -1,0 +1,9 @@
+---
+title: "One source, three outputs"
+subtitle: "the paper shape"
+format: pdf
+---
+
+On paper the answers become a lettered list with the answer key below it.
+
+{{< include _questions.qmd >}}

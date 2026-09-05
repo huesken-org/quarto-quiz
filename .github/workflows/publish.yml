@@ -1,0 +1,52 @@
+name: publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# what actions/deploy-pages needs
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# one deploy at a time, newest push wins
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # tinytex because example/handout.qmd is the paper shape — a real PDF
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.10.18
+          tinytex: true
+
+      # example/_extensions is a symlink to the extension in this repo, so the
+      # site is always built against the filter as it stands on this commit
+      - name: Render example
+        run: quarto render example
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: example/_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

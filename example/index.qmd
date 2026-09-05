@@ -1,0 +1,15 @@
+---
+title: "One source, three outputs"
+format:
+  html:
+    theme: cosmo
+---
+
+The same two questions are rendered here as a web quiz, on
+[slides](slides.qmd) as presenter check boxes, and in the
+[handout](handout.pdf) as a lettered answer list. The question text lives once,
+in `_questions.qmd`.
+
+Pick an answer, then press *Reveal*.
+
+{{< include _questions.qmd >}}
